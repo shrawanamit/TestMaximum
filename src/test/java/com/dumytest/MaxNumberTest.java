@@ -6,24 +6,24 @@ import org.junit.Test;
 public class MaxNumberTest {
     @Test
     public void testinteger() {
-        Integer max=15;
+        Integer max1=15;
         MaxNumber maxnumber=new MaxNumber(15,12,13);
-        Integer result=maxnumber.validateMaxIntger();
-        Assert.assertEquals(max,result);
+        maxnumber.validateMax();
+        Assert.assertEquals(max1,maxnumber.max);
     }
     @Test
     public void testDouble() {
-        Double max=15.2;
-        MaxNumber maxnumberdouble=new MaxNumber(15.2,12.3,13.3);
-        Double result=maxnumberdouble.validateMaxDouble();
-        Assert.assertEquals(max,result);
+        Double max1=15.2;
+        MaxNumber maxnumber=new MaxNumber(15.2,12.3,13.3);
+        maxnumber.validateMax();
+        Assert.assertEquals(max1,maxnumber.max);
     }
     @Test
     public void testString() {
-        String max="vinit";
-        MaxNumber maxnumberString=new MaxNumber("amit","sumit","vinit");
-        String result=maxnumberString.validateMaxString();
-        Assert.assertEquals(max,result);
+        String max1="vinit";
+        MaxNumber maxnumber=new MaxNumber("amit","sumit","vinit");
+        maxnumber.validateMax();
+        Assert.assertEquals(max1,maxnumber.max);
     }
 
 }
