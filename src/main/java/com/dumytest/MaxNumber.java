@@ -3,6 +3,7 @@ package com.dumytest;
 public class MaxNumber {
     Integer x,y,z;
     Double a,b,c;
+    String s,s1,s2;
 
     public MaxNumber(Integer x, Integer y, Integer z) {
         this.x = x;
@@ -14,6 +15,12 @@ public class MaxNumber {
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public MaxNumber(String s, String s1, String s2) {
+        this.s = s;
+        this.s1 = s1;
+        this.s2 = s2;
     }
 
     public Integer validateMaxIntger() {
@@ -36,6 +43,18 @@ public class MaxNumber {
             max=b;
         }else{
             max=c;
+        }
+        return max;
+    }
+
+    public String validateMaxString() {
+        String max;
+        if (s.compareTo(s1) > 0 && s.compareTo(s2) > 0) {
+            max = s;
+        } else if(s1.compareTo(s) > 0 && s.compareTo(s2) > 0){
+            max=s1;
+        }else{
+            max=s2;
         }
         return max;
     }

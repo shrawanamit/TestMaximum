@@ -18,5 +18,12 @@ public class MaxNumberTest {
         Double result=maxnumberdouble.validateMaxDouble();
         Assert.assertEquals(max,result);
     }
+    @Test
+    public void testString() {
+        String max="vinit";
+        MaxNumber maxnumberString=new MaxNumber("amit","sumit","vinit");
+        String result=maxnumberString.validateMaxString();
+        Assert.assertEquals(max,result);
+    }
 
 }
